@@ -1,0 +1,21 @@
+/* --- GENERAL: Styles globales */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    font-family: system-ui;
+    background-color: #fff;
+    color: #000;
+}
+
+/* BTN PRINCIPAL: Boton que muestra/oculta el formulario */

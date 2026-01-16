@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catlálogo V3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- BOTÓN DE INICIO: Boton que muestra/oculta el formulario -->
+    <button class="btn-addProduct">Haz click para añadir un producto</button>
+
+    <!-- FORMULARIO: Formulario para añadir productos (enctype: Para las imagenes)-->
+    <form class="form-addProduct hidden" autocomplete="off" enctype="multipart/form-data">
+        <label for="id-product">Id Producto</label>
+        <input type="text" name="id-product" id="id-product" required>
+
+        <label for="name-product">Nombre Producto</label>
+        <input type="text" name="name-product" id="name-product">
+
+        <label for="description-product">Descripción del Producto</label>
+        <input type="text" name="description-product" id="description-product">
+
+        <label for="price-product">Precio del Producto</label>
+        <input type="number" name="price-product" id="price-product">
+
+        <label for="file-product">Imagen del Producto</label>
+        <input type="file" name="file-product" id="file-product">
+
+        <input type="submit" value="Añadir Producto" id="input-addProduct">
+    </form>
+
+    <!-- MOSTRADOR: Usa Grid y muestra los productos creados-->
+    <div class="grid-catalogo"></div>
+
+    <!-- CONTEXT MENU: Div para borrar un objeto -->
+    <div class="context-menu hidden">
+        <p>¿Borrar este producto?</p>
+        <div class="context-menu-btns">
+            <button class="btn-confirm">Sí, borrar</button>
+            <button class="btn-cancel">No</button>
+        </div>
+    </div>
+
+    <!-- CONTADOR: Muestra el total de productos existentes -->
+    <p class="p-contador">Productos en catálogo: <span id="contador">0</span></p>
+
+    <script type="module" src="js/functions.js"></script>
+</body>
+</html>
