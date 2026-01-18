@@ -9,7 +9,9 @@ body{
     display: grid;
     place-items: center;
 
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding: 20px 0;
     margin: 0;
     padding: 0;
 
@@ -19,3 +21,181 @@ body{
 }
 
 /* BTN PRINCIPAL: Boton que muestra/oculta el formulario */
+.btn-addProduct {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-addProduct:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM: Formulario para añadir producto */
+.form-addProduct {
+    display: grid;
+    gap: 15px;
+
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 50%;
+
+    background-color: #fff;
+    border: 2px solid #000;
+}
+
+.form-addProduct.hidden {
+    display: none;
+}
+
+.form-addProduct label {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-addProduct input[type="text"],
+.form-addProduct input[type="number"]{
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    width: 100%; 
+}
+
+.form-addProduct input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-addProduct input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* CATÁLOGO: Contenedor catalago y item producto*/
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.product-card {
+    width: 100%;             
+    max-width: 350px; 
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;/* Elimina línea blanca debajo */
+}
+
+.product-name-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.product-card:hover .product-name-hover {
+    opacity: 1;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
+}
+
+.product-info {
+    background: #31313d;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.product-info p {
+    margin: 4px 0;
+}
+
+/* CONTADOR: Contador general de productos */
+.p-contador{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* CONTEXT-MENÚ: Menu que se muestra antes de eliminar un producto */
+.context-menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 8px;
+    font-family: sans-serif;
+}
+
+.context-menu.hidden { 
+    display: none; 
+}
+
+.context-menu-btns { 
+    display: flex; 
+    gap: 5px; 
+    margin-top: 10px; 
+}
+
+.btn-confirm { 
+    border: none; 
+    padding: 5px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+.btn-cancel { 
+    background: #eee;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}

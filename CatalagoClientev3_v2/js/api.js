@@ -50,7 +50,7 @@ class API {
         });
     }
 
-    // --- VALIDAD IMAGEN ---
+    // --- VALIDAR IMAGEN ---
     static validarImagen(file) {
         return new Promise((resolve, reject) => {
             const img = new Image();
