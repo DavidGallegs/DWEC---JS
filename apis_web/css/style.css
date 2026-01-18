@@ -1,0 +1,59 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+}
+
+/* Layout general */
+body {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 1.8rem;
+}
+
+/* Mapa */
+#map {
+    height: 400px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+/* Coordenadas */
+.coordenadas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.coordenadas div {
+    background-color: #eee;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Canvas */
+
+#lienzo {
+    height: 400px;
+    width: 400px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto 30px auto;
+}
