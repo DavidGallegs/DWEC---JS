@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Catálogo v3</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <button id="btn-toggle">Mostrar formulario</button>
+
+
+    <form id="form" onsubmit="return validarFormulario(event)">
+        <label for="IDProd">ID de producto</label>
+        <input type="text" id="IDProd" name="IDProd"/> 
+        <span id="errorID"></span>
+
+        <label for="producto">Nombre del producto</label>
+        <input type="text" id="producto" name="producto"/> 
+        <span id="errorProd"></span>
+
+        <label for="descripcion">Descripción breve</label>
+        <input type="text" id="descripcion" name="descripcion"/> 
+
+        <label for="precio">Precio</label>
+        <input type="number" id="precio" name="precio" step="0.1"/> 
+        <span id="errorPrecio"></span>
+
+        <label for="seleccionarImagen">Imagen del producto</label>
+        <input type="file" id="seleccionarImagen" accept="image/*"> 
+        <span id="errorImg"></span>
+
+        <button id="button" type="submit">Añadir producto</button>
+    </form>
+
+    <span id="exito"></span>
+    <span id="grid"></span>
+    <script src="js/functions.js"></script>
+</body>
+</html>
