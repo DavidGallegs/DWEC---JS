@@ -7,9 +7,7 @@ let ubicaciones = JSON.parse(localStorage.getItem("ubicaciones") || "[]");
 // Array para guardar los marcadores de Leaflet
 let marcadoresMapa = []; 
 
-// Canvas donde se mostrarán las coordenadas
 const lienzo = document.getElementById("lienzo"); 
-
 const contexto = lienzo.getContext("2d"); 
 const latencia = document.getElementById("lat"); 
 const longitud = document.getElementById("lng"); 
